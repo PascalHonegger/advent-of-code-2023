@@ -43,7 +43,6 @@ fun main() {
             }
     }
 
-    // test if implementation meets criteria from the description, like:
     val testInput = readInput("Day02_test")
     check(part1(testInput) == 8)
     check(part2(testInput) == 2286)
