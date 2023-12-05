@@ -39,8 +39,9 @@ fun Iterable<Long>.product() = reduce(Long::times)
  */
 fun Any?.println() = println(this)
 
-/** Converts "1 2  3" to [1, 2, 3 */
+/** Converts "1 2  3" to [1, 2, 3] */
 fun String.asSpaceSeparatedInts() = split(" ").filter { it.isNotBlank() }.map { it.toInt() }
+fun String.asSpaceSeparatedLongs() = split(" ").filter { it.isNotBlank() }.map { it.toLong() }
 
 inline fun <reified T> MutableMap<T, Int>.increase(key: T, by: Int = 1): Int =
     compute(key) { _, value ->
