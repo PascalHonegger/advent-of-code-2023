@@ -48,6 +48,12 @@ inline fun <reified T> MutableMap<T, Int>.increase(key: T, by: Int = 1): Int =
         (value ?: 0) + by
     }!!
 
+inline fun <reified T> List<T>.repeated(n: Int) = buildList<T> {
+    repeat(n) {
+        addAll(this@repeated)
+    }
+}
+
 /**
  * Taken from https://www.baeldung.com/kotlin/lcm
  */
