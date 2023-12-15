@@ -93,3 +93,5 @@ fun <E> List<List<E>>.transpose(): List<List<E>> {
         }
     }
 }
+
+inline fun <T> Iterable<T>.sumOfIndexed(transform: (index: Int, T) -> Int) = mapIndexed(transform).sum()
