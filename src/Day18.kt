@@ -14,12 +14,11 @@ value class Point(private val value: Long) {
     override fun toString() = "($x, $y)"
 }*/
 
-data class Point(val x: Int, val y: Int) {
-    fun plusX(delta: Int) = Point(x + delta, y)
-    fun plusY(delta: Int) = Point(x, y + delta)
-}
-
 fun main() {
+    data class Point(val x: Int, val y: Int) {
+        fun plusX(delta: Int) = Point(x + delta, y)
+        fun plusY(delta: Int) = Point(x, y + delta)
+    }
     data class DigPlan(val direction: Char, val distance: Int)
     data class Corner(
         val point: Point,
